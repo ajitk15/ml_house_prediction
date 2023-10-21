@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 
 app=Flask(__name__)
+
 ## Load the model
 regmodel=pickle.load(open('house_pred_model.pkl','rb'))
 scalar=pickle.load(open('StandardScaler.pkl','rb'))
