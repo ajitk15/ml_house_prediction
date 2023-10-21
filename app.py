@@ -7,20 +7,9 @@ import bz2file as bz2
 #Initiate Flask
 app=Flask(__name__)
 
-#Load Compressed pickel file
-#data1 = bz2.BZ2File('house_pred_model.pbz2','rb')
-#model = pickle.load(data1)
-
-def decompress_pickle(file):
-    data=bz2.BZ2File(open(file, 'rb'))
-    data = pickle.load(data)
-    return data
-
-model = decompress_pickle('house_pred_model.pbz2')
-
 #Load model
 scaler=pickle.load(open('StandardScaler.pkl','rb'))
-#model=pickle.load(open('house_pred_model.pkl','rb'))
+model=pickle.load(open('house_pred_model.pkl','rb'))
 
 @app.route('/')
 def home():
