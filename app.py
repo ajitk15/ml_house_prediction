@@ -3,6 +3,7 @@ from flask import Flask, request, app, jsonify, url_for, render_template
 import pandas as pd
 import numpy as np
 import bz2file as bz2
+import os
 
 #Initiate Flask
 app=Flask(__name__)
